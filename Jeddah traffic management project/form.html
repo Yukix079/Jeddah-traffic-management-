@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Management Interface</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Traffic Management System Interface</h1>
+    </header>
+    <div class="container mt-5">
+        <form id="trafficForm" class="bg-white p-4 rounded shadow">
+            <h2 class="text-center">Report Traffic Issue</h2>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" id="location" name="location" placeholder="Enter the location" required>
+            </div>
+
+            <div class="form-group">
+                <label for="traffic-density">Traffic Density:</label>
+                <select class="form-control" id="traffic-density" name="traffic-density" required>
+                    <option value="">--Select--</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                    <option value="critical">Critical</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="issue">Type of Issue:</label>
+                <select class="form-control" id="issue" name="issue" required>
+                    <option value="">--Select--</option>
+                    <option value="accident">Accident</option>
+                    <option value="construction">Road Construction</option>
+                    <option value="signal">Signal Failure</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea class="form-control" id="description" name="description" rows="4" placeholder="Provide additional details..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="reporter">Reporter Name:</label>
+                <input type="text" class="form-control" id="reporter" name="reporter" placeholder="Your name (optional)">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit Report</button>
+        </form>
+        <div class="text-center mt-3">
+            <button class="btn btn-secondary" onclick="location.href='index.html'">Back to System Interface</button>
+            <button class="btn btn-secondary" onclick="location.href='report.html'">Go to System Report</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
